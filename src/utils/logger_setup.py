@@ -5,7 +5,7 @@ class AppLogger:
         self.logger = logging.getLogger(name)
         format = '%(asctime)s - %(levelname)s - %(message)s'
         logging.basicConfig(level=logging.INFO, format=format)
-        self.logger.setLevel(logging.INFO)
+        self.logger.setLevel(logging.DEBUG)
 
     def info(self, message):
         self.logger.info(message)

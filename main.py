@@ -1,4 +1,4 @@
-from src.command import listCommand
+from src.command import listCommand, addCommand
 from src.utils.input_parser import validator
 from src.utils.logger_setup import loggerCursor
 from src.utils.db_conn import DbConn
@@ -37,8 +37,14 @@ def create_command(command_type, switches):
                                    list_asc=list_asc,
                                    list_desc=list_desc)
 
+    elif command_type == 'a':
+
+        return addCommand.AddCommand(person='-p' in switches, movie='-m' in switches)
+    elif command_type == 'd':
+        # Add deleteCommand here later
+        return None
     else:
-        # Add addCommand here later
+
         return None
 
 
