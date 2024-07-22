@@ -68,8 +68,8 @@ class input_parser :
         return None
 
     def validate_delete_command(self, args):
-        if len(args) != 2 or args[0] != '-p':
-            return "Invalid 'd' command format. Use 'd -p <person_name>'"
+        if len(args) != 1 or args[0] != '-p':
+            return "Invalid 'd' command format. Use 'd -p"
 
         return None
 
