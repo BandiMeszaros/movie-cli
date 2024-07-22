@@ -8,3 +8,6 @@ class DbConn:
 
     def __del__(self):
         self.conn.close()
+
+
+moviesDb = DbConn()
